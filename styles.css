@@ -1,0 +1,208 @@
+@import url(./variaveis.css);
+
+:root {
+  --green: #1A4855;
+  --green-light: #628E75;
+  --white: #F9F9F9; 
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-image: linear-gradient(135deg, #628E75 -20%, #1A4855);
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 14px 25px;
+}
+
+header img {
+  width: 100px;
+  height: 48px;
+}
+
+.firstImage {
+  position: relative;
+  overflow: visible;
+  opacity: 1;
+}
+
+.lastImage {
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.social-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.social-wrapper img {
+  width: 20px;
+  height: 20px;
+}
+
+.ilustracao {
+  width: 300px;
+  height: auto;
+
+  margin: 12px 82px 6px;
+  animation: ilustracao 5s linear infinite;
+
+}
+
+@keyframes ilustracao {
+ 0% {transform: translateY(0px)}
+ 25% {transform: translateY(15px)}
+ 50% {transform: translateY(25px)}
+ 100% {transform: translateY(0px)}
+}
+
+.content {
+  margin-left: 25px;
+
+  color: var(--white);
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 18px;
+
+  margin-bottom: 6px;
+}
+
+.content h2 {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 109%;
+
+  margin-bottom: 16px;
+}
+
+.description {
+  margin-bottom: 56px;
+  font-size: 14px;
+  line-height: 180%;
+  font-weight: normal;
+}
+
+.buttons-wrapper {
+  display: flex;
+}
+
+button {
+  height: 45px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  
+  padding: 0 33px;
+  transform: skew(-25deg);
+  cursor: pointer;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.btn1 {
+  background-color: var(--green-light);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-right: 15px;
+} 
+
+.btn2 {
+  background-color: transparent;
+  border: 2px solid var(--green-light);
+  
+  opacity: 0;
+  overflow: hidden;
+}
+
+button:hover {
+  border: 1px solid var(--white);
+}
+
+button p {
+  transform: skew(25deg);
+}
+
+button img {
+  width: 20px;
+  height: 20px;
+  transform: skew(25deg);
+  margin-right: 10px;
+ 
+}
+
+
+@media (min-width: 1200px) {
+  main {
+    display: flex;
+    padding: 75px 165px;
+  }
+
+  header{
+    padding: 41px 165px;
+  }
+
+  .social-wrapper {
+    gap: 29px
+  }
+
+  .content {
+    margin-right: 160px;
+  }
+
+  .content h1 {
+    font-size: 20px;
+  }
+ .content h2 {
+    font-size: 68px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 180%;
+  }
+
+  .ilustracao {
+    width: 500px;
+    height: auto;
+  }
+
+  .lastImage {
+    position: relative;
+    overflow: visible;
+    opacity: 1;
+  }
+  
+  .firstImage {
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .btn2 {
+    opacity: 1;
+    overflow: hidden;
+  }
+
+  @keyframes ilustracao {
+    0% {transform: translateY(0px)}
+    25% {transform: translateY(25px)}
+    50% {transform: translateY(50px)}
+    75% {transform: translateY(25px)}
+    100% {transform: translateY(0px)}
+   }
+}
